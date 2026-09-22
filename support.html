@@ -15,15 +15,14 @@
      -------------------------------------------------------------- */
   :root{
     --app-name:"Fly with Lino";
-    --accent:#2E7FB8;              /* colore dell'app */
+    --accent:#2E7FB8;              /* app colour */
     --ink:#171715;
     --paper:#F2EEE4;
     --muted:#716B62;
     --line:rgba(23,23,21,.18);
   }
 
-  /* Font serviti dal repo del sito: stesso dominio, un file solo per tutte
-     e cinque le app invece di cinque copie. */
+  /* Fonts served from the site repo: same domain, one file for all apps. */
   @font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;
     src:url("/fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2")}
   @font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:500;font-display:swap;
@@ -91,19 +90,22 @@
 
   <p class="app" style="margin-top:clamp(38px,6vw,64px)">Fly with Lino</p>
   <h1>Support</h1>
-  <p class="updated">Last updated: <strong>11 September 2026</strong></p>
+  <p class="updated">Last updated: <strong>22 September 2026</strong></p>
 
   <div class="box">
-    <p><strong>Scrivi a <a href="mailto:support@bottega01.com">support@bottega01.com</a>.</strong>
-    Rispondo io, di persona. Indica il modello di iPhone, la versione di iOS e la versione dell'app: dimezza i tempi.</p>
+    <p><strong>Write to <a href="mailto:support@bottega01.com">support@bottega01.com</a>.</strong>
+    Replies come from a person, not a queue. Tell us your iPhone model, your iOS version and the app version: it halves the time.</p>
   </div>
 
   <h2>Frequently asked</h2>
   <h3>The forecast said one thing and the flight went differently</h3>
   <p>The forecast is an estimate drawn from weather models. Outside the United States there are no detailed official advisories for every route, so the App says openly whenever it is showing an estimate. It is there to prepare you, not to promise how it will go.</p>
 
-  <h3>It can't find my flight number</h3>
-  <p>Use the number printed on your ticket, for example AZ1234. The codes shown by radar-tracking apps are radio call signs and often don't match the commercial number.</p>
+  <h3>How do I get the forecast for my flight?</h3>
+  <p>Enter the departure and arrival airports, or import a screenshot of your boarding pass: Lino reads the barcode on your phone and works out the route by itself. Your name and booking details stay on your device.</p>
+
+  <h3>My boarding pass isn't recognised</h3>
+  <p>Make sure the screenshot shows the whole barcode, sharp and uncropped. If your airline's pass doesn't include one, just enter the two airports: the forecast is exactly the same.</p>
 
   <h3>I don't see speed and altitude in flight</h3>
   <p>Those come from GPS, which struggles inside the cabin because the fuselage blocks the signal. Near a window it works better. Pressure readings keep working either way.</p>
@@ -115,7 +117,7 @@
   <p>They shouldn't: playback continues in the background. If it stops, check that the App is allowed to play audio and that your phone is not in Low Power Mode, which can suspend background playback.</p>
 
   <h2>Report a problem</h2>
-  <p>Write to <a href="mailto:support@bottega01.com">support@bottega01.com</a> with your iPhone model, your iOS version and what you were doing. If it concerns a flight, the number and date help.</p>
+  <p>Write to <a href="mailto:support@bottega01.com">support@bottega01.com</a> with your iPhone model, your iOS version and what you were doing. If it concerns a flight, the two airports and the date help.</p>
 
   <h2>Purchases and restoring</h2>
   <p>Calm Pro is a one-time purchase tied to your Apple ID. On a new device you can restore it from the App's settings without paying again. Refunds go through Apple, not through us.</p>

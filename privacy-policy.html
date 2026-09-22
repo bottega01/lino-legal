@@ -15,15 +15,14 @@
      -------------------------------------------------------------- */
   :root{
     --app-name:"Fly with Lino";
-    --accent:#2E7FB8;              /* colore dell'app */
+    --accent:#2E7FB8;              /* app colour */
     --ink:#171715;
     --paper:#F2EEE4;
     --muted:#716B62;
     --line:rgba(23,23,21,.18);
   }
 
-  /* Font serviti dal repo del sito: stesso dominio, un file solo per tutte
-     e cinque le app invece di cinque copie. */
+  /* Fonts served from the site repo: same domain, one file for all apps. */
   @font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:400;font-display:swap;
     src:url("/fonts/ibm-plex-sans-latin-400-normal.woff2") format("woff2")}
   @font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:500;font-display:swap;
@@ -91,7 +90,7 @@
 
   <p class="app" style="margin-top:clamp(38px,6vw,64px)">Fly with Lino</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: <strong>11 September 2026</strong></p>
+  <p class="updated">Last updated: <strong>22 September 2026</strong></p>
 
   <h2>1. In short</h2>
   <div class="box">
@@ -105,19 +104,20 @@
   <p>To estimate movement during the flight in real time, Lino reads your phone's motion and orientation sensors — accelerometer, gyroscope and barometer. This data is processed entirely on your device, in real time, and is never transmitted to us or to third parties.</p>
 
   <h2>4. Location</h2>
-  <p>If you enable it, Lino may use your location for the airport-arrival reminder, to record where a bumpy moment happened, and to estimate altitude and speed. Location is processed on your device and is not sent to our servers. You can deny or revoke this permission at any time in iOS Settings; the rest of the App keeps working.</p>
+  <p>If you enable it, Lino may use your location for the airport reminder, to record where a bumpy moment happened, and to estimate altitude and speed. If you open Lino at the airport, it also turns on GPS so it can lock on before boarding, while the App stays open. Location is processed on your device and is not sent to our servers. You can deny or revoke this permission at any time in iOS Settings; the rest of the App keeps working.</p>
 
   <h2>5. Your flights</h2>
   <p>Lino keeps a record of the flights it has followed with you and of the turbulence it detected along the way, so you can look back at them after landing. These records — up to 300 moments and 100 flights — are stored on your device only, and are removed when you uninstall the App.</p>
 
   <h2>6. Camera and photos</h2>
-  <p>The camera is used only when you choose to scan a boarding pass or take a photo of your flight. If you pick an image from your library, it is chosen through the system photo picker. Photos stay on your device: composing a flight image happens locally, and nothing is uploaded. If you save the result, it goes to your own photo library.</p>
+  <p>The camera is used only when you choose to scan a boarding pass or take a photo of your flight. If you pick an image from your library — a flight photo, or a screenshot of your boarding pass — it is chosen through the system photo picker, which does not give the App access to the rest of your library. Photos stay on your device: composing a flight image happens locally, and nothing is uploaded. If you save the result, it goes to your own photo library.</p>
+  <p>A boarding pass barcode also contains your name, your booking reference and your seat. Lino reads the barcode on your device and keeps only the two airports, the flight number and the date. Your name, booking reference and seat are never stored and never leave your phone, and the image itself is not kept after reading.</p>
 
   <h2>7. Sounds in the background</h2>
   <p>The calming sounds keep playing when you leave the App or lock your screen, because that is when they are most useful. Playback always starts from a tap of yours and stops when you stop it.</p>
 
   <h2>8. Flight forecast</h2>
-  <p>When you request the turbulence forecast, the App sends your flight number or the two airport codes, the date and the language to our service, along with a random identifier generated at install time that we use only to limit abuse of the service. No personal identifier is sent. The weather itself comes from NOAA, a public United States agency, and flight routes from AeroDataBox, queried by our server.</p>
+  <p>When you request the turbulence forecast, the App sends only the two airport codes and your language to our service. Nothing else: no identifier, no account, no device data. The weather comes from NOAA, a public United States agency.</p>
 
   <h2>9. Advertising</h2>
   <p>In the free version, Lino shows ads via Google AdMob. Before any ad appears you are asked for consent, and you may refuse profiling: in that case you will see non-personalised ads. This data is governed by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. You can limit ad tracking in iOS Settings under Privacy &amp; Security, Tracking. With Calm Pro, advertising is removed entirely and no data is shared with AdMob.</p>
@@ -129,15 +129,15 @@
     <tr><td>Recorded flights</td><td>On your device</td><td>Last 100, until you uninstall</td></tr>
     <tr><td>Sensor readings</td><td>On your device</td><td>Not kept beyond immediate use</td></tr>
     <tr><td>Location</td><td>On your device</td><td>Saved only with the moment it belongs to</td></tr>
-    <tr><td>Flight lookup</td><td>Our server</td><td>Route cached up to 90 days</td></tr>
     <tr><td>Images you create</td><td>On your device</td><td>Until you delete them</td></tr>
+    <tr><td>Boarding pass barcode</td><td>On your device</td><td>Not kept: only airports, flight number and date are used</td></tr>
   </table>
 
   <h2>11. Purchases</h2>
   <p>The optional Calm Pro purchase is handled entirely by Apple through the App Store. We do not see or store payment data.</p>
 
   <h2>12. Third-party services</h2>
-  <p><strong>NOAA Aviation Weather</strong> — forecast data for your route, no personal identifiers sent. <strong>AeroDataBox</strong> — flight routes, receives only the flight number. <strong>Google AdMob</strong> — advertising in the free version. <strong>Apple StoreKit</strong> — in-app purchase handling. <strong>Cloudflare Workers</strong> — our own service, which relays the forecast request.</p>
+  <p><strong>NOAA Aviation Weather</strong> — forecast data for your route, no personal identifiers sent. <strong>Google AdMob</strong> — advertising in the free version. <strong>Apple StoreKit</strong> — in-app purchase handling. <strong>Cloudflare Workers</strong> — our own service, which prepares the forecast from the two airport codes.</p>
 
   <h2>13. Children's privacy</h2>
   <p>Fly with Lino is not directed at young children and does not knowingly collect data from minors. If you believe a child has provided personal data through the advertising service, please write to us and we will take appropriate steps.</p>
@@ -152,7 +152,7 @@
   <p>If this policy changes, the date at the top is updated and the new version appears at this address.</p>
 
   <h2>17. Contact</h2>
-  <p>Francesco Sarpellon, bottega01 — <a href="mailto:privacy@bottega01.com">privacy@bottega01.com</a></p>
+  <p>bottega01 — <a href="mailto:privacy@bottega01.com">privacy@bottega01.com</a></p>
 
 
 
